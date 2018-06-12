@@ -1,9 +1,21 @@
-## MY VIMRC
+## Pretty convenient vimrc ever
 
-## Contains
+### Contains
 
 - Line and Column highlight
-- Vundle
-- vim-airline, vim-airline-theme
-- typo fixing
-- indent, line number...
+- [Vundle](https://github.com/VundleVim/Vundle.vim)
+- [vim-airline](https://github.com/vim-airline/vim-airline), [vim-airline-theme](https://github.com/vim-airline/vim-airline-themes)
+- abbr typo fixing
+- indent
+- line number
+
+### Install
+
+```
+./install.sh
+```
+
+
+### Dependencies
+
+- [powerline fonts](https://github.com/powerline/fonts)
