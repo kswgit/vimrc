@@ -14,7 +14,7 @@ if [ -f ~/.vimrc ]; then
 fi
 
 # Download .vimrc
-curl https://raw.githubusercontent.com/kswgit/vimrc/master/.vimrc -O ~/.vimrc
+wget https://raw.githubusercontent.com/kswgit/vimrc/master/.vimrc -O ~/.vimrc
 
 #Install Plugins
 vim +PluginInstall +qall
