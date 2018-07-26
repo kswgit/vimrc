@@ -10,6 +10,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'posva/vim-vue'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/nerdtree'
 Plugin 'cocopon/iceberg.vim'
 Plugin 'pangloss/vim-javascript'
 
@@ -55,11 +56,6 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='luna'
 let g:javascript_plugin_jsdoc=1
 
-augroup javascript_folding
-  au!
-  au FileType javascript setlocal foldmethod=syntax
-augroup END
-
 let g:javascript_conceal_function             = "ƒ"
 let g:javascript_conceal_null                 = "ø"
 let g:javascript_conceal_this                 = "@"
@@ -80,3 +76,7 @@ colorscheme iceberg
 hi CursorLine cterm=None ctermbg=236
 hi CursorColumn cterm=None ctermbg=236
 
+map <C-n> :NERDTreeToggle<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+autocmd vimenter * NERDTree
